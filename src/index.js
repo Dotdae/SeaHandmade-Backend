@@ -1,9 +1,6 @@
 import app from "./app.js";
+import "./db.js";
 import { serverTime } from "./config.js";
 
-app.listen(3000);
 
-// Get current time.
-
-
-console.log(`[${serverTime()}] Server on port ->`, 3000);
+console.log(`[${serverTime()}] Server on port ->`, app.get("port"));
