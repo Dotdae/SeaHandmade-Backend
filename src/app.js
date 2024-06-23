@@ -4,6 +4,8 @@ import morgan from 'morgan';
 
 // Routes.
 
+import authRoutes from './routes/auth.routes.js';
+
 // Set web server.
 
 const app = express();
@@ -17,9 +19,11 @@ app.set("json spaces", 4);
 // Middlewares.
 
 app.use(morgan('dev'));
+app.use(express.json());
 
 // Routes.
 
+app.use('/api/auth', authRoutes);
 
 app.listen(PORT);
 
