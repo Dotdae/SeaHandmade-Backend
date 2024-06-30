@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import cookieParser from 'cookie-parser';
 
 
 // Routes.
@@ -20,6 +21,7 @@ app.set("json spaces", 4);
 
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(cookieParser());
 
 // Routes.
 
