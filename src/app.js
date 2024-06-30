@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 // Routes.
 
 import authRoutes from './routes/auth.routes.js';
+import productRoutes from './routes/products.routes.js';
 
 // Set web server.
 
@@ -26,6 +27,7 @@ app.use(cookieParser());
 // Routes.
 
 app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
 
 app.listen(PORT);
 
